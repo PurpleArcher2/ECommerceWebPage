@@ -30,14 +30,15 @@ deduct.addEventListener("click", function () {
 
 addcart.addEventListener("click", function () {
   total.innerHTML = number;
+  total.style.background = "red";
 });
 
 showCart.addEventListener("click", function () {
-  if (result.innerText <= 0) {
+  if (total.innerText <= 0) {
     float.classList.toggle("hidden");
   }
 
-  if (result.innerText > 0) {
+  if (total.innerText > 0) {
     let totalPrice = number * 125;
 
     // Added image
@@ -94,13 +95,12 @@ showCart.addEventListener("click", function () {
     contPara.style.textAlign = "center";
   }
 
-  // ...
-
   contTrash.addEventListener("click", function () {
     total.innerText = 0;
     result.innerText = 0;
     number = 0;
     float.classList.add("hidden");
+    total.style.background = "white";
 
     // Reset the container to its original state
     resetContainer();
