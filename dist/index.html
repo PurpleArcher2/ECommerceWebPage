@@ -1,102 +1,144 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="/src/output.css">
-</head>
-<body class="font-np">
-  
-
-
-<head class="relative">
-  <nav class="flex pt-10 pl-32 pr-32 items-center after:content-[''] after:absolute after:left-32 after:right-0 after:top-32 after:h-0.5 after:w-5/6 after:bg-customGray">
-    <div class="flex">
-      <img src="/images/logo.svg" class="self-baseline" alt="">
-      <ul class="flex pl-10">
-        <li class="pr-8"><a href="">Collections</a></li>
-        <li class="pr-8"><a href="">Men</a></li>
-        <li class="pr-8"><a href="">Women</a></li>
-        <li class="pr-8"><a href="">About</a></li>
-        <li class="pr-8"><a href="">Contact</a></li>
-      </ul>
-    </div>
-
-    <div class="flex w-2/3 justify-end gap-12 items-center relative">
-      <div id ="total" class="absolute cursor-pointer bg-red-500 w-4 h-4 rounded-full text-center right-24 top-0 text-xs text-white"></div>
-      
-      <div id="float" class=" shadow-[0_3px_10px_rgb(0,0,0,0.2)] z-10 absolute w-2/4 top-24 shadow hidden bg-white">
-        
-      <h1 class="border-b-4 border-customGray font-bold px-4 py-4">Cart</h1>
-      <p id="containerParagraph" class="p-14 text-center opacity-60">Your cart is empty</p>
-      </div>
-      
-      <img id="showCart" src="/images//icon-cart.svg" class="cursor-pointer" alt="">
-      <img src="/images/image-avatar.png" class="max-w-14" alt="">
-    </div>  
-  </nav>
-
-</head>
-
-
-<section class="flex pt-32 pr-36 pl-36 gap-32">
-
-  <div class="h-full w-full flex relative flex-col items-center">
-    <div class="w-4/6 mx-auto relative left-16 mb-8"><img src="/images/image-product-1.jpg" class="rounded-lg" alt=""></div>
-
-    <div class="w-full h-full flex relative">
-      <div class="flex gap-8 max-w-24 absolute left-28">
-          <img src="/images/image-product-1-thumbnail.jpg" class="rounded-lg cursor-pointer hover:border-customNormalOrange border-4 duration-100 border-white hover:brightness-95" alt="">  
-          <img src="/images/image-product-2-thumbnail.jpg" class="rounded-lg cursor-pointer hover:border-customNormalOrange border-4 duration-100 border-white hover:brightness-95" alt="">  
-          <img src="/images/image-product-3-thumbnail.jpg" class="rounded-lg cursor-pointer hover:border-customNormalOrange border-4 duration-100 border-white hover:brightness-95" alt="">  
-          <img src="/images/image-product-4-thumbnail.jpg" class="rounded-lg cursor-pointer hover:border-customNormalOrange border-4 duration-100 border-white hover:brightness-95" alt="">  
-      </div>
-  </div>
-</div>
-
-    <div class="w-full">
-      <p class="text-customNormalOrange mb-4">SNEAKER COMPANY</p>
-      <h1 class="font-bold text-4xl mb-8">Fall Limited Edition <br> Sneakers</h1>
-      <p class="opacity-65 mb-8">These low-profile sneakers are your perfect casual wear <br> companion. Featureing a durable rubber outer sole, they'll <br> withstand everything the weather can offer.</p>
-      <div class="flex gap-5 mb-2">
-        <h1 class="font-bold text-4xl">$125.00</h1> <p class="py-2 px-6 font-bold bg-customPaleOrange text-customNormalOrange rounded-lg">50%</p>
-      </div>
-      <p class="line-through opacity-35 mb-8">$250.00</p>
-
-      <div class="flex gap-4">
-
-        <div class="flex gap-9 py-2 px-8 bg-customLightGray rounded-lg">
-          <p id="Deduct" class="cursor-pointer duration-100 hover:scale-150 hover:brightness-105 text-customNormalOrange font-bold">-</p>
-          <p id="Result" class="font-bold">0</p>
-          <p id="Add" class="cursor-pointer duration-100 hover:scale-150 hover:brightness-105 text-customNormalOrange font-bold">+</p>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/src/output.css" />
+  </head>
+  <body class="font-np">
+    <head class="relative">
+      <nav
+        class="flex pt-10 pl-32 pr-32 items-center after:content-[''] after:absolute after:left-32 after:right-0 after:top-32 after:h-0.5 after:w-5/6 after:bg-customGray"
+      >
+        <div class="flex">
+          <img src="/images/logo.svg" class="self-baseline" alt="" />
+          <ul class="flex pl-10">
+            <li class="pr-8"><a href="">Collections</a></li>
+            <li class="pr-8"><a href="">Men</a></li>
+            <li class="pr-8"><a href="">Women</a></li>
+            <li class="pr-8"><a href="">About</a></li>
+            <li class="pr-8"><a href="">Contact</a></li>
+          </ul>
         </div>
 
+        <div class="flex w-2/3 justify-end gap-12 items-center relative">
+          <div
+            id="total"
+            class="absolute cursor-pointer bg-red-500 w-4 h-4 rounded-full text-center right-24 top-0 text-xs text-white"
+          ></div>
 
-        <div id="addCart" class="gap-9 py-2 px-8 bg-customNormalOrange rounded-lg text-white flex flex-wrap cursor-pointer duration-100 hover:scale-110 hover:brightness-105">
+          <div
+            id="float"
+            class="shadow-[0_3px_10px_rgb(0,0,0,0.2)] z-10 absolute w-2/4 top-24 hidden bg-white"
+          >
+            <h1 class="border-b-4 border-customGray font-bold px-4 py-4">
+              Cart
+            </h1>
+            <p id="containerParagraph" class="p-14 text-center opacity-60">
+              Your cart is empty
+            </p>
+          </div>
 
-          <img src="/images/icon-cart.svg" class="" alt="">
-          <button>Add to Cart</button>
+          <img
+            id="showCart"
+            src="/images//icon-cart.svg"
+            class="cursor-pointer"
+            alt=""
+          />
+          <img src="/images/image-avatar.png" class="max-w-14" alt="" />
+        </div>
+      </nav>
+    </head>
 
+    <section id="sectionID" class="flex pt-32 pr-36 pl-36 gap-32">
+      <div class="h-full w-full flex relative flex-col items-center">
+        <div class="w-4/6 mx-auto relative left-16 mb-8">
+          <img src="/images/image-product-1.jpg" class="rounded-lg" alt="" />
         </div>
 
+        <div class="w-full h-full flex relative">
+          <div class="flex gap-8 max-w-24 absolute left-28">
+            <img
+              src="/images/image-product-1-thumbnail.jpg"
+              class="rounded-lg cursor-pointer hover:border-customNormalOrange border-4 duration-100 border-white hover:brightness-95"
+              alt=""
+            />
+            <img
+              src="/images/image-product-2-thumbnail.jpg"
+              class="rounded-lg cursor-pointer hover:border-customNormalOrange border-4 duration-100 border-white hover:brightness-95"
+              alt=""
+            />
+            <img
+              src="/images/image-product-3-thumbnail.jpg"
+              class="rounded-lg cursor-pointer hover:border-customNormalOrange border-4 duration-100 border-white hover:brightness-95"
+              alt=""
+            />
+            <img
+              src="/images/image-product-4-thumbnail.jpg"
+              class="rounded-lg cursor-pointer hover:border-customNormalOrange border-4 duration-100 border-white hover:brightness-95"
+              alt=""
+            />
+          </div>
+        </div>
       </div>
 
-    </div>
+      <div class="w-full">
+        <p class="text-customNormalOrange mb-4">SNEAKER COMPANY</p>
+        <h1 class="font-bold text-4xl mb-8">
+          Fall Limited Edition <br />
+          Sneakers
+        </h1>
+        <p class="opacity-65 mb-8">
+          These low-profile sneakers are your perfect casual wear <br />
+          companion. Featureing a durable rubber outer sole, they'll <br />
+          withstand everything the weather can offer.
+        </p>
+        <div class="flex gap-5 mb-2">
+          <h1 id="money" class="font-bold text-4xl">$125.00</h1>
+          <p
+            class="py-2 px-6 font-bold bg-customPaleOrange text-customNormalOrange rounded-lg"
+          >
+            50%
+          </p>
+        </div>
+        <p class="line-through opacity-35 mb-8">$250.00</p>
 
-</section>
+        <div class="flex gap-4">
+          <div class="flex gap-9 py-2 px-8 bg-customLightGray rounded-lg">
+            <p
+              id="Deduct"
+              class="cursor-pointer duration-100 hover:scale-150 hover:brightness-105 text-customNormalOrange font-bold"
+            >
+              -
+            </p>
+            <p id="Result" class="font-bold">0</p>
+            <p
+              id="Add"
+              class="cursor-pointer duration-100 hover:scale-150 hover:brightness-105 text-customNormalOrange font-bold"
+            >
+              +
+            </p>
+          </div>
 
-<!-- 
+          <div
+            id="addCart"
+            class="gap-9 py-2 px-8 bg-customNormalOrange rounded-lg text-white flex flex-wrap cursor-pointer duration-100 hover:scale-110 hover:brightness-105"
+          >
+            <img src="/images/icon-cart.svg" class="" alt="" />
+            <button>Add to Cart</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 
 
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Nazar Poladian</a>.
   </div> -->
 
-
-
-  <script src="/script.js"></script>
-
-
-</body>
+    <script src="/script.js"></script>
+  </body>
 </html>
